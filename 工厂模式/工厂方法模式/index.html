@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    justify-content: center;
+    display: flex;
+  }
+
+  div span {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid gray;
+    margin: 0 5px;
+    border-radius: 4px;
+  }
+
+  .active {
+    background-color: gray;
+    color: white;
+  }
+</style>
+
+<body>
+  <div id="app">
+    <span class="active">0</span>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+  </div>
+</body>
+<!-- 模块化开发，需要在script标签中加入type="module" -->
+<script src="./inputmanager.js" type="module"></script>
+<script src="./render.js" type="module"></script>
+<script src="./renderwithalert.js" type="module"></script>
+<script src="./factory.js" type="module"></script>
+<script src="./index.js" type="module"></script>
+
+</html>
