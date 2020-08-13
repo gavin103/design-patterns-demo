@@ -13,6 +13,8 @@
 
 🟢  工厂模式（Factory Pattern）
 
+🟢  抽象工厂模式（Abstract Factory Pattern）
+
 🟢  单例模式（Singleton Pattern）
 
 ⚪️  建造者模式（Builder Pattern）
@@ -30,7 +32,7 @@
 
 ⚪️  组合模式（Composite Pattern）
 
-⚪️  装饰器模式（Decorator Pattern）
+🟢  装饰器模式（Decorator Pattern）
 
 ⚪️  外观模式（Facade Pattern）
 
