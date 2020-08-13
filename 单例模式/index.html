@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    iframe {
+      width: 500px;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>惰性单例</h1>
+  <p>
+    <button id="show-btn">展示Iframe</button>
+    <button id="hide-btn">隐藏Iframe</button>
+  </p>
+  <!-- <iframe src="//www.baidu.com"></iframe> -->
+</body>
+
+</html>
+<script>
+  var getSingle = function (fn) {
+    var result;
+    return function () {
+      console.log('res', result)
+      return result || (result = fn.apply(this, arguments));
+    }
+  };
+
+  var createIframe = function () {
+    var frm = document.createElement('iframe');
+    frm.src = '//www.baidu.com';
+    frm.style.display = 'none';
+    document.body.appendChild(frm);
+    return frm;
+  };
+  var createSingleIframe = getSingle(createIframe);
+  document.getElementById('show-btn').onclick = function () {
+    var loginLayer = createSingleIframe();
+    loginLayer.style.display = 'block';
+  };
+  document.getElementById('hide-btn').onclick = function () {
+    var loginLayer = createSingleIframe();
+    loginLayer.style.display = 'none';
+  };
+
+
+</script>
